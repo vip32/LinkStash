@@ -2,12 +2,8 @@
 
 namespace LinkStash.Core
 {
-    public class Link
+    public class Link : Entity
     {
-        public int Id { get; set; }
-
-        public string Hash { get; set; }
-
         public string Group { get; set; }
 
         public string Source { get; set; }

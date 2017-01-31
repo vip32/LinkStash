@@ -2,7 +2,7 @@
 
 namespace LinkStash.Core
 {
-    public class UserLinks
+    public class UserLink
     {
         public int UserId { get; set; }
 
