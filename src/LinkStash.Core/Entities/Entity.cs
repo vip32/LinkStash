@@ -1,5 +1,6 @@
 ﻿namespace LinkStash.Core
 {
+    using System;
     using Newtonsoft.Json;
 
     /// <summary>
@@ -18,6 +19,8 @@
                 return this.GetType().Name;
             }
         }
+
+        public DateTime Timestamp { get; set; }
 
         /// <summary>
         /// Implements the operator ==.

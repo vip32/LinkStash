@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace LinkStash.Core
+﻿namespace LinkStash.Core
 {
+    using System;
+
     public class Link : Entity
     {
         public string Group { get; set; }
@@ -12,8 +12,8 @@ namespace LinkStash.Core
 
         public string Title { get; set; }
 
-        public string Author { get; set; }
+        public string[] Tags { get; set; }
 
-        public DateTime Created { get; set; }
+        public string Author { get; set; }
     }
 }

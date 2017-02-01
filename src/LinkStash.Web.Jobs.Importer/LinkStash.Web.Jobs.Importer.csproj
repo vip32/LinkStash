@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp1.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\LinkStash.Core\LinkStash.Core.csproj" />
   </ItemGroup>
   <ItemGroup>

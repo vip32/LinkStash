@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-
-namespace LinkStash.Core
+﻿namespace LinkStash.Core
 {
-    public interface IRepository<T> where T : Entity
+    using System;
+    using System.Collections.Generic;
+    using System.Linq.Expressions;
+    using System.Threading.Tasks;
+
+    public interface IRepository<T>
+        where T : Entity
     {
         Task<IEnumerable<T>> GetAllAsync();
 

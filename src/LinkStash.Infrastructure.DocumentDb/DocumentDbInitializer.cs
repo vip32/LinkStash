@@ -1,11 +1,12 @@
-﻿using System;
-using Microsoft.Azure.Documents;
-using Microsoft.Azure.Documents.Client;
-//using Microsoft.Azure.Documents.Client.TransientFaultHandling;
+﻿//using Microsoft.Azure.Documents.Client.TransientFaultHandling;
 //using Microsoft.Azure.Documents.Client.TransientFaultHandling.Strategies;
 
 namespace LinkStash.Infrastructure.DocumentDb
 {
+    using System;
+    using Microsoft.Azure.Documents;
+    using Microsoft.Azure.Documents.Client;
+
     public class DocumentDbInitializer : IDocumentDbInitializer
     {
         public IDocumentClient GetClient(
@@ -14,10 +15,14 @@ namespace LinkStash.Infrastructure.DocumentDb
             ConnectionPolicy connectionPolicy = null)
         {
             if (string.IsNullOrWhiteSpace(endpointUrl))
+            {
                 throw new ArgumentNullException(nameof(endpointUrl));
+            }
 
             if (string.IsNullOrWhiteSpace(authorizationKey))
+            {
                 throw new ArgumentNullException(nameof(authorizationKey));
+            }
 
             return new DocumentClient(new Uri(endpointUrl), authorizationKey, connectionPolicy ?? new ConnectionPolicy());
         }

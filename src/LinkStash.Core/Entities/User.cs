@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace LinkStash.Core
+﻿namespace LinkStash.Core
 {
+    using System;
 
     public class User : Entity
     {
-        public DateTime Created { get; set; }
     }
 }

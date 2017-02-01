@@ -6,6 +6,7 @@
     <PackageReference Include="EnterpriseLibrary.TransientFaultHandling.Core" Version="1.0.0" />
     <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="1.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LinkStash.Core\LinkStash.Core.csproj" />

@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
-
-namespace LinkStash.Infrastructure.DocumentDb
+﻿namespace LinkStash.Infrastructure.DocumentDb
 {
+    using System;
+    using System.Runtime.CompilerServices;
+    using System.Threading.Tasks;
 
     public class AsyncLazy<T> : Lazy<Task<T>>
     {
@@ -19,7 +18,7 @@ namespace LinkStash.Infrastructure.DocumentDb
 
         public TaskAwaiter<T> GetAwaiter()
         {
-            return Value.GetAwaiter();
+            return this.Value.GetAwaiter();
         }
     }
 }
